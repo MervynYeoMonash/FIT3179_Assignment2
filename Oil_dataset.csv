@@ -1,4 +1,4 @@
-Country,Daily Oil Consumption (Barrels),World Share,Yearly Gallons Per Capita,Price Per Gallon (USD),Price Per Liter (USD),Population,Continent,Annual_Co2_emissions,Annual_Co2_emission_per_capita
+Country,Daily Oil Consumption (Barrels),World Share,Yearly Gallons Per Capita,Price Per Gallon (USD),Price Per Liter (USD),Population,Continent,Annual_Co2_emissions,Annual Co2 emission per capita (kiloton)
 China,12791553,13.20%,138.7,5.42,1.43,1439323774,Asia,10667887453,7.41173573709066
 India,4443000,4.60%,51.4,5.05,1.33,1380004385,Asia,2441792313,1.769409097203702
 Japan,4012877,4.10%,481.5,4.69,1.24,126476458,Asia,1030775384,8.149938734052784
