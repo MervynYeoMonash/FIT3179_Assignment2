@@ -37,20 +37,37 @@
         "color": {"value": "transparent"}  
       }
     },  
-    {
+    {"transform": [
+      {
+        "calculate": "'Data is not available in ' + datum.properties.NAME",
+        "as": "note"
+      }
+    ],
       "mark": "geoshape",
       "encoding": {
         "color": {"value": "lightgrey"},
         "opacity": {"value": 0.7},
         "tooltip": [
-        {"field": "properties.NAME", "type": "nominal", "title":"Country"}
+        {"field": "note"}
       ] 
         
       }
+      
     },
+    
+    
     
     {  
     "mark": {"type": "geoshape","stroke": "black"},
+    "params": [
+      {
+        "name": "highlight", 
+        "select": {
+          "type": "point",
+           "on": "mouseover"}
+          }
+        ],
+        
     "encoding": {
       "color": {
         "field": "Price Per Liter (USD)",
@@ -59,6 +76,30 @@
           "type": "threshold",
           "domain": [0.5,1,1.5,1.75,2]
         }            
+      },
+      "opacity":{
+        "condition": {
+          "param": "highlight", 
+          "value": 1
+        },
+          "value": 0.7
+      },
+      "stroke": {
+        "condition": {
+          "param": "highlight",
+          "empty": false,
+          "value": "black"
+        },
+        "value": "black"
+      },
+
+      "strokeWidth": {
+        "condition": {
+          "param": "highlight",
+          "empty": false,
+          "value": 2
+        },
+        "value": 1
       },
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title":"Country"},
@@ -73,13 +114,18 @@
     },
     "mark": {"type": "geoshape", "fill": "skyblue"}
   },
-   {
+  {
+  
       "mark": {"type": "geoshape", "fill": null,"stroke": "lightgray"},
       "data": {
       "url": "https://raw.githubusercontent.com/MervynYeoMonash/FIT3179_Homework4/main/ne_110m.topojson",
       "format": {"type": "topojson", "feature":"ne_110m_graticules_30" }
       }
+      
+      
+
     }
+    
     
   ]
 }
