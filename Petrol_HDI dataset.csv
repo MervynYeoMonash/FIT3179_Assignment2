@@ -1,162 +1,161 @@
-Country,Human Development Index (2021),Yearly Gallons Per Capita
-United States of America,0.921,934.3
-China,0.768,138.7
-India,0.633,51.4
-Japan,0.925,481.5
-Saudi Arabia,0.875,1560.2
-Brazil,0.754,221.9
-South Korea,0.925,783.4
-Canada,0.936,1047.6
-Germany,0.942,444.5
-Mexico,0.758,255.1
-Iran,0.774,347.6
-France,0.903,404.3
-Indonesia,0.705,95.1
-United Kingdom,0.929,366.2
-Singapore,0.939,3679.5
-Thailand,0.8,289.4
-Italy,0.895,312.5
-Spain,0.905,424.1
-Australia,0.951,704.3
-Turkey,0.838,180.9
-Netherlands,0.941,846.0
-Egypt,0.731,142.3
-Iraq,0.686,358.9
-United Arab Emirates,0.911,1467.3
-South Africa,0.713,174.6
-Argentina,0.842,249.8
-Malaysia,0.803,353.7
-Belgium,0.937,852.6
-Pakistan,0.544,41.9
-Poland,0.876,234.9
-Venezuela,0.691,307.1
-Nigeria,0.535,35.3
-Philippines,0.699,63.4
-Colombia,0.752,113.6
-Algeria,0.745,162.2
-Chile,0.855,296.3
-Hong Kong,0.952,864.5
-Kuwait,0.831,1390.9
-Ukraine,0.773,83.7
-Morocco,0.683,120.0
-Peru,0.762,121.9
-Ecuador,0.74,240.8
-Kazakhstan,0.811,279.4
-Greece,0.887,427.6
-Austria,0.916,459.8
-Sweden,0.947,502.0
-Romania,0.821,154.9
-Cuba,0.764,206.9
-Hungary,0.846,244.5
-Lebanon,0.706,349.3
-Portugal,0.866,351.7
-Turkmenistan,0.745,403.4
-Switzerland,0.962,417.5
-Denmark,0.948,424.6
-Israel,0.919,446.6
-Ireland,0.945,497.5
-Libya,0.718,526.6
-New Zealand,0.937,549.2
-Finland,0.94,585.7
-Panama,0.805,588.6
-Norway,0.961,595.8
-Oman,0.816,626.3
-Qatar,0.855,993.4
-Bangladesh,0.661,11.0
-Myanmar,0.585,35.5
-Kenya,0.575,35.6
-Sudan,0.508,53.9
-Angola,0.586,70.7
-Sri Lanka,0.782,92.6
-Tunisia,0.731,131.5
-Jordan,0.72,182.9
-Dominican Republic,0.767,196.1
-Bulgaria,0.795,207.9
-Belarus,0.808,222.3
-Azerbaijan,0.745,151.2
-Guatemala,0.627,86.0
-Bolivia,0.692,125.1
-Ghana,0.632,47.4
-Slovakia,0.848,229.8
-Ethiopia,0.498,10.9
-Serbia,0.802,128.1
-Tanzania,0.549,20.8
-Croatia,0.858,251.3
-Bahrain,0.875,666.6
-Lithuania,0.875,326.9
-Yemen,0.455,33.9
-Honduras,0.621,95.9
-Trinidad and Tobago,0.81,634.3
-Luxembourg,0.93,1487.2
-Costa Rica,0.809,172.1
-Jamaica,0.709,284.8
-Uruguay,0.809,237.3
-El Salvador,0.675,125.4
-Slovenia,0.918,386.5
-Cyprus,0.896,681.2
-Paraguay,0.717,115.4
-Uzbekistan,0.727,23.9
-Senegal,0.511,50.1
-Cambodia,0.593,46.7
-Malta,0.918,1652.2
-Nepal,0.602,24.2
-Mozambique,0.446,22.0
-Cameroon,0.576,25.6
-Kyrgyzstan,0.692,100.9
-Latvia,0.863,292.7
-Papua New Guinea,0.558,68.6
-Nicaragua,0.667,90.0
-Benin,0.525,50.8
-Afghanistan,0.478,15.2
-Bosnia and Herzegovina,0.78,158.4
-Georgia,0.802,126.0
-Uganda,0.525,12.4
-Estonia,0.89,336.0
-Mauritius,0.802,340.2
-Albania,0.796,143.4
-Namibia,0.615,169.0
-Zimbabwe,0.593,26.2
-Burkina Faso,0.449,18.9
-Haiti,0.535,32.5
-Mali,0.428,18.8
-Zambia,0.565,20.6
-Tajikistan,0.685,37.2
-Mongolia,0.739,105.3
-Botswana,0.693,149.0
-North Macedonia,0.77,154.7
-Gabon,0.706,160.3
-Bahamas,0.812,812.7
-Guinea,0.465,24.8
-Iceland,0.959,880.9
-North Korea,,10.9
-Madagascar,0.501,11.1
-Moldova,0.767,67.9
-Congo,0.571,52.3
-Fiji,0.73,281.2
-Togo,0.539,30.6
-Guyana,0.714,278.2
-Suriname,0.73,352.8
-Maldives,0.747,354.6
-Barbados,0.79,590.1
-South Sudan,0.385,11.3
-Liberia,0.481,26.7
-Seychelles,0.785,1169.1
-Montenegro,0.832,171.1
-Rwanda,0.534,8.8
-Sierra Leone,0.477,13.6
-Malawi,0.512,5.3
-Armenia,0.759,31.3
-Somalia,,6.1
-Cabo Verde,0.662,161.6
-Lesotho,0.514,36.9
-Belize,0.683,166.5
-Gambia,0.5,27.1
-Bhutan,0.666,62.4
-Central African Republic,0.404,9.5
-Grenada,0.795,278.1
-Burundi,0.426,2.2
-Comoros,0.558,25.0
-Dominica,0.72,279.7
-Vanuatu,0.607,60.6
-Tonga,0.745,136.3
-Kiribati,0.624,54.5
+Country,Human Development Index (2021),Yearly Gallons Per Capita,Continent
+United States of America,0.921,934.3,North America
+China,0.768,138.7,Asia
+India,0.633,51.4,Asia
+Japan,0.925,481.5,Asia
+Saudi Arabia,0.875,1560.2,Asia
+Brazil,0.754,221.9,South America
+South Korea,0.925,783.4,Asia
+Canada,0.936,1047.6,North America
+Germany,0.942,444.5,Europe
+Mexico,0.758,255.1,North America
+Iran,0.774,347.6,Asia
+France,0.903,404.3,Europe
+Indonesia,0.705,95.1,Asia
+United Kingdom,0.929,366.2,Europe
+Singapore,0.939,3679.5,Asia
+Thailand,0.8,289.4,Asia
+Italy,0.895,312.5,Europe
+Spain,0.905,424.1,Europe
+Australia,0.951,704.3,Oceania
+Turkey,0.838,180.9,Asia
+Netherlands,0.941,846.0,Europe
+Egypt,0.731,142.3,Africa
+Iraq,0.686,358.9,Asia
+United Arab Emirates,0.911,1467.3,Asia
+South Africa,0.713,174.6,Africa
+Argentina,0.842,249.8,South America
+Malaysia,0.803,353.7,Asia
+Belgium,0.937,852.6,Europe
+Pakistan,0.544,41.9,Asia
+Poland,0.876,234.9,Europe
+Venezuela,0.691,307.1,South America
+Nigeria,0.535,35.3,Africa
+Philippines,0.699,63.4,Asia
+Colombia,0.752,113.6,South America
+Algeria,0.745,162.2,Africa
+Chile,0.855,296.3,South America
+Hong Kong,0.952,864.5,Asia
+Kuwait,0.831,1390.9,Asia
+Ukraine,0.773,83.7,Europe
+Morocco,0.683,120.0,Africa
+Peru,0.762,121.9,South America
+Ecuador,0.74,240.8,South America
+Kazakhstan,0.811,279.4,Asia
+Greece,0.887,427.6,Europe
+Austria,0.916,459.8,Europe
+Sweden,0.947,502.0,Europe
+Romania,0.821,154.9,Europe
+Cuba,0.764,206.9,North America
+Hungary,0.846,244.5,Europe
+Lebanon,0.706,349.3,Asia
+Portugal,0.866,351.7,Europe
+Turkmenistan,0.745,403.4,Asia
+Switzerland,0.962,417.5,Europe
+Denmark,0.948,424.6,Europe
+Israel,0.919,446.6,Asia
+Ireland,0.945,497.5,Europe
+Libya,0.718,526.6,Africa
+New Zealand,0.937,549.2,Oceania
+Finland,0.94,585.7,Europe
+Panama,0.805,588.6,North America
+Norway,0.961,595.8,Europe
+Oman,0.816,626.3,Asia
+Qatar,0.855,993.4,Asia
+Bangladesh,0.661,11.0,Asia
+Myanmar,0.585,35.5,Asia
+Kenya,0.575,35.6,Africa
+Sudan,0.508,53.9,Africa
+Angola,0.586,70.7,Africa
+Sri Lanka,0.782,92.6,Asia
+Tunisia,0.731,131.5,Africa
+Jordan,0.72,182.9,Asia
+Dominican Republic,0.767,196.1,North America
+Bulgaria,0.795,207.9,Europe
+Belarus,0.808,222.3,Europe
+Azerbaijan,0.745,151.2,Asia
+Guatemala,0.627,86.0,North America
+Bolivia,0.692,125.1,South America
+Ghana,0.632,47.4,Africa
+Slovakia,0.848,229.8,Europe
+Ethiopia,0.498,10.9,Africa
+Serbia,0.802,128.1,Europe
+Tanzania,0.549,20.8,Africa
+Croatia,0.858,251.3,Europe
+Bahrain,0.875,666.6,Asia
+Lithuania,0.875,326.9,Europe
+Yemen,0.455,33.9,Asia
+Honduras,0.621,95.9,North America
+Trinidad and Tobago,0.81,634.3,North America
+Luxembourg,0.93,1487.2,Europe
+Costa Rica,0.809,172.1,North America
+Jamaica,0.709,284.8,North America
+Uruguay,0.809,237.3,South America
+El Salvador,0.675,125.4,North America
+Slovenia,0.918,386.5,Europe
+Cyprus,0.896,681.2,Europe
+Paraguay,0.717,115.4,South America
+Uzbekistan,0.727,23.9,Asia
+Senegal,0.511,50.1,Africa
+Cambodia,0.593,46.7,Asia
+Malta,0.918,1652.2,Europe
+Nepal,0.602,24.2,Asia
+Mozambique,0.446,22.0,Africa
+Cameroon,0.576,25.6,Africa
+Kyrgyzstan,0.692,100.9,Asia
+Latvia,0.863,292.7,Europe
+Papua New Guinea,0.558,68.6,Oceania
+Nicaragua,0.667,90.0,North America
+Benin,0.525,50.8,Africa
+Afghanistan,0.478,15.2,Asia
+Bosnia and Herzegovina,0.78,158.4,Europe
+Georgia,0.802,126.0,Asia
+Uganda,0.525,12.4,Africa
+Estonia,0.89,336.0,Europe
+Mauritius,0.802,340.2,Africa
+Albania,0.796,143.4,Europe
+Namibia,0.615,169.0,Africa
+Zimbabwe,0.593,26.2,Africa
+Burkina Faso,0.449,18.9,Africa
+Haiti,0.535,32.5,North America
+Mali,0.428,18.8,Africa
+Zambia,0.565,20.6,Africa
+Tajikistan,0.685,37.2,Asia
+Mongolia,0.739,105.3,Asia
+Botswana,0.693,149.0,Africa
+North Macedonia,0.77,154.7,Europe
+Gabon,0.706,160.3,Africa
+Bahamas,0.812,812.7,North America
+Guinea,0.465,24.8,Africa
+Iceland,0.959,880.9,Europe
+North Korea,,10.9,Asia
+Madagascar,0.501,11.1,Africa
+Moldova,0.767,67.9,Europe
+Congo,0.571,52.3,Africa
+Fiji,0.73,281.2,Oceania
+Togo,0.539,30.6,Africa
+Guyana,0.714,278.2,South America
+Suriname,0.73,352.8,South America
+Maldives,0.747,354.6,Asia
+Barbados,0.79,590.1,North America
+South Sudan,0.385,11.3,Africa
+Liberia,0.481,26.7,Africa
+Seychelles,0.785,1169.1,Africa
+Montenegro,0.832,171.1,Europe
+Rwanda,0.534,8.8,Africa
+Sierra Leone,0.477,13.6,Africa
+Malawi,0.512,5.3,Africa
+Armenia,0.759,31.3,Asia
+Somalia,,6.1,Africa
+Lesotho,0.514,36.9,Africa
+Belize,0.683,166.5,North America
+Gambia,0.5,27.1,Africa
+Bhutan,0.666,62.4,Asia
+Central African Republic,0.404,9.5,Africa
+Grenada,0.795,278.1,North America
+Burundi,0.426,2.2,Africa
+Comoros,0.558,25.0,Africa
+Dominica,0.72,279.7,North America
+Vanuatu,0.607,60.6,Oceania
+Tonga,0.745,136.3,Oceania
+Kiribati,0.624,54.5,Oceania
