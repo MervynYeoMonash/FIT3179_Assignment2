@@ -1,0 +1,149 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "data": {
+      "url": "https://raw.githubusercontent.com/MervynYeoMonash/FIT3179_Assignment2/main/Oil_dataset.csv"
+    },
+    "background": "#F4DFB6",
+    "width": 600,
+    "height": 450,
+    "padding": {
+        "left": 100
+       
+      }, 
+    
+      "params": [
+        
+        {
+          "name": "Continent_selection",
+          "bind": {
+            "input": "select",
+            "options": [
+              null,
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "labels": [
+              "Overall",
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "name": "Select a Continent: "
+          }
+        }
+        
+      
+      ],
+  
+    "transform": [
+      {
+          "filter": "Continent_selection == null || datum['Continent'] == Continent_selection"
+      },
+      {"filter": "datum['Yearly Gallons Per Capita']"},
+      {"window": [{"op": "count", "as": "index"}]},
+      {"fold": ["Yearly Gallons Per Capita", "Annual Co2 emission per capita (kiloton)"]},
+      {
+        "joinaggregate": [
+          {"op": "min", "field": "value", "as": "min"},
+          {"op": "max", "field": "value", "as": "max"}
+        ],
+        "groupby": ["key"]
+      },
+      {
+        "calculate": "(datum.value - datum.min) / (datum.max-datum.min)",
+        "as": "norm_val"
+      },
+      {
+        "calculate": "(datum.min + datum.max) / 2",
+        "as": "mid"
+      }
+    ],
+    "layer": [{
+      "mark": {"type": "rule", "color": "black"},
+      "encoding": {
+        "detail": {"aggregate": "count"},
+        "x": {"field": "key"}
+      }
+    }, {
+      "mark": "line",
+      
+      "encoding": {
+        
+        "color":
+         {"type": "nominal", "field": "Continent","scale": {
+            "scheme": "category10"
+            
+          },
+          "legend": {
+            "labelFontStyle": "san-serif",
+            "titleFontStyle": "serif",
+            "orient": "right",
+            "offset": -90,
+            "labelOffset": 0
+            
+          }},
+        "detail": {"type": "nominal", "field": "index"},
+        
+        
+        "opacity": {"value": 0.5},
+        "x": {"type": "nominal", "field": "key"},
+        "y": {"type": "quantitative", "field": "norm_val", "axis": null},
+        "tooltip": [{
+          "type": "quantitative",
+          "field": "Annual Co2 emission per capita (kiloton)",
+          "title":"Annual Co2 emission per capita"
+        }, {
+          "type": "quantitative",
+          "field": "Yearly Gallons Per Capita"
+        },{
+          "type": "quantitative",
+          "field": "Country"
+        }]
+      }
+    }, {
+      "encoding": {
+        "x": {"type": "nominal", "field": "key"},
+        "y": {"value": 0}
+      },
+      
+      "layer": [{
+        "mark": {"type": "text", "style": "label","size": 12},
+        "encoding": {
+          "text": {"aggregate": "max", "field": "max","format": ".3f"}
+        }
+      }, {
+        "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+      }]
+    },  {
+      "encoding": {
+        "x": {"type": "nominal", "field": "key"},
+        "y": {"value": 450}
+      },
+      "layer": [{
+        "mark": {"type": "text", "style": "label","size": 12},
+        "encoding": {
+          "text": {"aggregate": "min", "field": "min","format": ".3f"}
+        }
+      }, {
+        "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+      }]
+    }],
+    "config": {
+      "axisX": {"domain": false, "labelAngle": 0, "tickColor": "#ccc", "title": null},
+      "view": {"stroke": "transparent"},
+      "style": {
+        "label": {"baseline": "middle", "align": "right", "dx": -5},
+        "tick": {"orient": "horizontal"}
+      }
+  
+    }
+  }
+  

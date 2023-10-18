@@ -1,0 +1,147 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 600,
+  
+  
+  "background": "#F4DFB6",
+  "title": "Petrol price per gallon & consumption per Country (June 2022)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/MervynYeoMonash/FIT3179_Assignment2/main/Oil_dataset_v2.csv"
+  },
+  "params": [
+
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Price Per Gallon (USD)",
+      "type": "quantitative",
+      "title": "Price Per Gallon (USD)",
+      "axis": {"tickCount": 7}      
+    },
+    "y": {
+      "field": "Yearly Gallons Per Capita",
+      "type": "quantitative",
+      "axis": {"tickCount": 4},
+      "scale": {"type": "log", "domain": [1, 10000]}
+    }
+  },
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "Population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+            "range": [50, 100, 150, 200, 300, 400]
+          },
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8",
+              "#a65628"
+            ]
+          }
+        },
+        "opacity": {"value": 0.6},
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Price Per Gallon (USD)", "type": "quantitative", "format": ","},
+          {"field": "Yearly Gallons Per Capita", "type": "quantitative", "format": ","},
+          {"field": "Population", "type": "quantitative", "format": ","}
+          
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {
+          "condition":{
+            "test":"datum['Country']==='Singapore'",
+            "value": ["Singapore has the highest Yearly Gallons per Capita despite the highest Price per Gallon in Asia "]
+
+          }
+        }
+        
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {
+          "condition":{
+            "test":"datum['Country']==='Burundi'",
+            "value": ["Burundi has the lowest Yearly Gallons per Capita"]
+
+          }
+        }
+        
+        
+      }
+    }
+  ]
+}

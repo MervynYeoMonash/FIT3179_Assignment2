@@ -1,0 +1,125 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/MervynYeoMonash/FIT3179_Assignment2/main/oil_production.csv"},
+    "config": {
+      "view": {
+        "stroke": "transparent"
+      },
+      "legend": {
+        "labelFont": "sans-serif",
+        "titleFont": "sans-serif",
+        "titleColor": "black",
+        "labelColor": "black",
+        "titleFontSize":{
+          "expr": "12"
+        },
+        "labelFontSize":{
+          "expr": "12"
+        }
+    }
+      
+    }, 
+    "padding": {
+        "left": 40
+       
+      }, 
+    
+    "background": "#F4DFB6",
+    "width": 375,
+    "height": 375,
+    
+    "params": [
+      {
+        "name": "hover",
+        "select": {
+          "type": "point",
+          "on": "mouseover"
+        }
+      }],
+    "transform": [
+      {
+        "joinaggregate": [{"op": "count", "field": "Continent", "as": "TotalOrigin"}]
+      },
+      {
+        "joinaggregate": [
+          {"op": "count", "field": "Continent", "as": "TotalOriginGrouped"}
+        ],
+        "groupby": ["Continent"]
+      },
+      {
+        "calculate": "round(datum.TotalOriginGrouped/datum.TotalOrigin * 100)",
+        "as": "PercentOfTotal"
+      },
+      {
+        "aggregate": [{"op": "min", "field": "PercentOfTotal", "as": "P"}],
+        "groupby": ["Continent"]
+      },
+      {"calculate": "sequence(1,datum.P+1)", "as": "S"},
+      {"flatten": ["S"]},
+      {
+        "window": [{"op": "row_number", "as": "id"}],
+        "sort": [{"field": "Origin", "order": "descending"}]
+      },
+      {"calculate": "ceil (datum.id / 10)", "as": "row"},
+      {"calculate": "datum.id - datum.row * 10", "as": "col"}
+    ],
+    "mark": {
+      "type": "square",
+      "filled": true,
+      "tooltip": true,
+      "stroke": "black",
+      "strokeWidth": 0.7
+    },
+    
+    "encoding": {
+      "x": {"field": "col", "type": "ordinal", "axis": null},
+      "y": {"field": "row", "type": "ordinal", "axis": null, "sort": "-y"},
+      "color": {
+        "field": "Continent",
+        "type": "nominal",
+        "scale": {"scheme": "category10"},
+        "legend": {
+          "orient": "right",
+          "offset": 10,
+          "labelOffset": 4,
+          "titlePadding": 5,
+          "titleFontSize": 15
+        }
+      },"stroke": {
+        "condition": [
+          {
+            "param": "hover",
+            "empty": false,
+            "value": "white"
+          }
+        ],
+        "value": "white"
+      },
+      "strokeWidth": {
+        "condition": [
+          {
+            "param": "hover",
+            "empty": false,
+            "value": 2
+          }
+        ],
+        "value": 0.35
+      },
+      "opacity": {
+        "condition": [
+          {
+            "param": "hover",
+            "value": 1
+          }
+        ],
+        "value": 0.5
+      },
+  
+      "size": {"value": 550},
+      "tooltip": [{"field": "Continent", "type": "nominal","title": "Continent"},
+      {"field":"P","type":"quantitative","title": " Oil Production Proportion (%)"}]
+    }
+  
+    
+    
+  }
